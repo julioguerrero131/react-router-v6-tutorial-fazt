@@ -5,6 +5,7 @@ import UsersPage from './pages/UsersPage';
 import UserPage from './pages/UserPage';
 import NotFoundPage from './pages/NotFoundPage';
 import NavBar from './components/NavBar';
+import Dashboard from './pages/Dashboard';
 // BROWSERROUTER
 // Engloba toda la App
 // Permite crear enlaces dentro de las etiquetas
@@ -28,6 +29,7 @@ function App() {
         <Route path="/users" element={<UsersPage/>} />
         <Route path="/usuarios" element={<Navigate replace to={'/users'}/>} />
         <Route path="/users/:id" element={<UserPage/>} />
+        <Route path="/dashboard" element={<Dashboard/>} />
         <Route path="*" element={<NotFoundPage/>} />
       </Routes>
       

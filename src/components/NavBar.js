@@ -20,6 +20,11 @@ function NavBar() {
                         Users
                     </NavLink>
                 </li>
+                <li>
+                    <NavLink className={({ isActive }) => (isActive) ? 'active' : 'blue'} to="/dashboard">
+                        Dashboard
+                    </NavLink>
+                </li>
             </ul>
         </div>
     )
