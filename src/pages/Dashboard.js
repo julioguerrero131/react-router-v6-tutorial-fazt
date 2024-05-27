@@ -1,4 +1,4 @@
-import { useNavigate, Route, Routes, Link } from "react-router-dom";
+import { useNavigate, Link, Outlet } from "react-router-dom";
 // antes: useSystem
 
 // Panel de control del usuario
@@ -14,15 +14,18 @@ function Dashboard() {
     <div>
       <h1>Dashboard</h1>
       <button onClick={handleClick}>log out</button>
-
+      <br/>
       <Link to='welcome'>Say Welcome</Link>
+      <br/>
+      <Link to='goodbye'>Say Good Bye</Link>
+      <br/>
 
-      <Routes>
-      <Route path="welcome" element={<p>Welcome</p>} />s
-      </Routes>
-      
+      <Outlet />
+
     </div>
   );
 }
+// OUTLET
+// indica donde pintar el subcomponente
 
 export default Dashboard;

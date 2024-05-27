@@ -26,10 +26,16 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/about" element={<AboutPage/>} />
+
         <Route path="/users" element={<UsersPage/>} />
         <Route path="/usuarios" element={<Navigate replace to={'/users'}/>} />
         <Route path="/users/:id" element={<UserPage/>} />
-        <Route path="/dashboard/*" element={<Dashboard/>} />
+        <Route path='/users/new' element={<p>New User</p>}/>
+
+        <Route path="/dashboard/*" element={<Dashboard/>}>
+          <Route path="welcome" element={<p>Welcome</p>} />
+          <Route path="goodbye" element={<p>goodbye</p>} />
+        </Route>
         <Route path="*" element={<NotFoundPage/>} />
       </Routes>
       
