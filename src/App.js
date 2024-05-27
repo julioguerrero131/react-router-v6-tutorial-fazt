@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import UsersPage from './pages/UsersPage';
@@ -26,6 +26,7 @@ function App() {
         <Route path="/" element={<HomePage/>} />
         <Route path="/about" element={<AboutPage/>} />
         <Route path="/users" element={<UsersPage/>} />
+        <Route path="/usuarios" element={<Navigate replace to={'/users'}/>} />
         <Route path="/users/:id" element={<UserPage/>} />
         <Route path="*" element={<NotFoundPage/>} />
       </Routes>
@@ -33,5 +34,8 @@ function App() {
     </BrowserRouter>
   )
 }
+// Navigate sirve para redireccionar a alguna pagina
+// por ejemplo, a un usuario que se le expiro la sesion abierta
+// se reeplaza la pagina pero no la ruta, a menos que se use replace
 
 export default App
