@@ -16,7 +16,7 @@ function NavBar() {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink className={({ isActive }) => (isActive) ? 'active' : 'blue'} to="/user">
+                    <NavLink className={({ isActive }) => (isActive) ? 'active' : 'blue'} to="/users">
                         Users
                     </NavLink>
                 </li>
@@ -24,7 +24,11 @@ function NavBar() {
         </div>
     )
 }
+// NAVLINK
 // para que no se refresque la pagina, usar: NavLink
 // cambia el estado de la app, sin refrescar pagina
+
+// LINK
+// reemplazo de la etiqueta a
 
 export default NavBar
