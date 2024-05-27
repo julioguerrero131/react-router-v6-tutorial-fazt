@@ -29,7 +29,7 @@ function App() {
         <Route path="/users" element={<UsersPage/>} />
         <Route path="/usuarios" element={<Navigate replace to={'/users'}/>} />
         <Route path="/users/:id" element={<UserPage/>} />
-        <Route path="/dashboard" element={<Dashboard/>} />
+        <Route path="/dashboard/*" element={<Dashboard/>} />
         <Route path="*" element={<NotFoundPage/>} />
       </Routes>
       
@@ -39,5 +39,10 @@ function App() {
 // Navigate sirve para redireccionar a alguna pagina
 // por ejemplo, a un usuario que se le expiro la sesion abierta
 // se reeplaza la pagina pero no la ruta, a menos que se use replace
+
+// PARAMS: /ruta/:param
+
+// SUBCOMPONENTE: necesita /ruta/*
+// para aceptar es una ruta dentro de otra ruta
 
 export default App
